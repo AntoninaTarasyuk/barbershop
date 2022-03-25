@@ -1,0 +1,17 @@
+/* Цвет текста основной - color: #555555; */
+/* Цвет текста заголовков - color: #303030; */
+/* Цвет текста на темном фоне - color: #ffffff; */
+/* Цвет фона страницы - color: #ffffff; */
+/* Цвет фона страницы 2 - color: #f7f7f7; */
+/* Цвет акцента (фон,текст,кнопки, ссылки) color: #ff6c00; */
+
+:root {
+  --primary-text-color: #555555;
+  --title-text-color: #303030;
+  --dark-bg-text-color: #ffffff;
+  --accent-color: #ff6c00;
+  --primary-bg-color: #ffffff;
+  --secondary-bg-color: #f7f7f7;
+  --time-function: linear;
+  --transition-time: 300ms;
+}

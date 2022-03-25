@@ -1,0 +1,23 @@
+.masters {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 44px;
+}
+.masters__name {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.4;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #303030;
+  margin-top: 30px;
+}
+.masters__proffesion {
+  font-size: 14px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #ff6c00;
+  margin-top: 8px;
+  margin-bottom: 30px;
+}

@@ -1,0 +1,21 @@
+.about-us__container {
+  display: flex;
+}
+.about-us__photos {
+  display: flex;
+  flex-shrink: 0;
+}
+.about-us__item:last-child {
+  margin-left: 30px;
+}
+.about-us__wrap {
+  padding: 0px 65px;
+}
+.about-us__description {
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+  color: #555555;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}

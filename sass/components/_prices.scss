@@ -1,0 +1,53 @@
+.prices__section {
+  background-color: #111319;
+  background-image: url(../images/prices-bg-1x.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+.prices__wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 44px;
+  margin-bottom: 50px;
+}
+.prices__list {
+  width: 100%;
+  padding: 30px 40px;
+}
+.prices__list:nth-child(odd) {
+  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+.prices__list:nth-child(even) {
+  background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+}
+.prices__item {
+  display: flex;
+  justify-content: space-between;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  &::before {
+    content: "";
+
+    border-bottom: 1px solid rgba(157, 164, 189, 0.12);
+    margin-left: 6px;
+    margin-right: 6px;
+
+    flex-grow: 1;
+  }
+}
+.prices__text {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+  &:first-child {
+    order: -1;
+  }
+}
+.prices__btn-wrap {
+  text-align: center;
+}
