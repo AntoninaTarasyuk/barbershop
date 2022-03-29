@@ -1,11 +1,16 @@
 .footer {
-  padding-top: 55px;
-  padding-bottom: 55px;
+  padding: 44px 0;
+  @media screen and(min-width: 768px) {
+    padding: 56px 0;
+  }
 }
 .footer__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @media screen and(min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
 }
 
 .footer__copyright {
@@ -14,4 +19,8 @@
   line-height: 1.36;
   letter-spacing: 0.2em;
   color: #9da4bd;
+  margin-top: 20px;
+  @media screen and(min-width: 768px) {
+    margin-top: 0;
+  }
 }
