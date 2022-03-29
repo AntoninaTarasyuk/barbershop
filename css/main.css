@@ -276,11 +276,15 @@ summary {
   margin: -1px;
 }
 
-.body {
+body {
   font-family: "Open Sans", sans-serif;
   letter-spacing: 0.03em;
   color: #555555;
   background-color: #ffffff;
+}
+
+body.menu-open {
+  overflow: hidden;
 }
 
 ul {
@@ -433,7 +437,7 @@ p {
 .header__link {
   font-weight: 600;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 1.33;
   letter-spacing: 0.1em;
   color: #ffffff;
   text-decoration: none;
@@ -588,18 +592,22 @@ p {
 }
 
 .button {
+  min-width: 160px;
+  height: 40px;
+  padding: 12px 20px;
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.09em;
-  text-transform: uppercase;
   color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
   background-color: transparent;
-  min-width: 160px;
-  height: 40px;
   border: 1px solid #ff6c00;
   border-radius: 25px;
+  cursor: pointer;
   -webkit-transition: color 300ms linear, background-color 300ms linear;
   transition: color 300ms linear, background-color 300ms linear;
 }
@@ -612,6 +620,9 @@ p {
 }
 .button--send {
   margin-top: 44px;
+}
+.button--for-menu {
+  width: 194px;
 }
 
 .about-us__container {
@@ -872,6 +883,7 @@ p {
 
 .form__input {
   width: 270px;
+  max-width: 270px;
   height: 24px;
   font-weight: 600;
   font-size: 11px;
@@ -929,6 +941,7 @@ p {
 .form__input[name=comment] {
   resize: none;
   width: 100%;
+  max-width: 100%;
   height: 76px;
 }
 
@@ -955,4 +968,144 @@ p {
   line-height: 1.36;
   letter-spacing: 0.2em;
   color: #9da4bd;
+}
+
+.mobile-menu__backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 1;
+  overflow-y: scroll;
+  opacity: 1;
+  -webkit-transition: opacity 500ms linear;
+  transition: opacity 500ms linear;
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu__backdrop {
+    display: none;
+  }
+}
+
+.mobile-menu__backdrop.is-hidden {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.mobile-menu__backdrop.is-hidden .mobile-menu__container {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.mobile-menu__container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 100%;
+  min-height: 100vh;
+  padding: 46px 30px 46px 50px;
+  background-color: #ffffff;
+  z-index: 2;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 500ms linear;
+  transition: -webkit-transform 500ms linear;
+  transition: transform 500ms linear;
+  transition: transform 500ms linear, -webkit-transform 500ms linear;
+}
+
+.mobile-menu__open-btn {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  fill: #ffffff;
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu__open-btn {
+    display: none;
+  }
+}
+
+.mobile-menu__btn-wrap {
+  text-align: end;
+  margin-bottom: 30px;
+}
+
+.mobile-menu__close-btn {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  fill: #303030;
+}
+
+.mobile-menu__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.mobile-menu__link {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  color: #303030;
+  text-decoration: none;
+  -webkit-transition: color 300ms linear;
+  transition: color 300ms linear;
+}
+.mobile-menu__link:hover, .mobile-menu__link:focus {
+  color: #ff6c00;
+}
+
+.mobile-menu__connect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 64px 0;
+}
+
+.mobile-menu__tel {
+  margin-bottom: 24px;
+}
+
+.mobile-menu__media-list {
+  position: relative;
+  padding-left: 100px;
+}
+.mobile-menu__media-list::before {
+  position: absolute;
+  content: "";
+  left: 0px;
+  top: 9px;
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.mobile-menu__media-item:first-child {
+  margin-bottom: 24px;
+}
+
+.mobile-menu__media-link {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: #303030;
+  text-decoration: none;
+  -webkit-transition: color 300ms linear;
+  transition: color 300ms linear;
+}
+.mobile-menu__media-link:hover, .mobile-menu__media-link:focus {
+  color: #ff6c00;
 }/*# sourceMappingURL=main.css.map */

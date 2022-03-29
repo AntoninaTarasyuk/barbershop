@@ -25,7 +25,38 @@
       </nav>
       <div class="header__connect">
         <a class="header__tel" href="tel:+380441111111">+38 044 111 11 11</a>
-        <button class="button" type="button">Онлайн-запись</button>
+        <a class="button" href="#contacts">Онлайн-запись</a>
+      </div>
+      <button class="mobile-menu__open-btn" type="button" aria-controls="mobile-menu__backdrop" open-menu-button>
+        <svg class="mobile-menu__open-icon" width="40" height="40" aria-label="Кнопка открытия мобильного меню">
+          <use href="./images/icons.svg#menu_40px"></use>
+        </svg>
+      </button>
+    </div>
+    <!-- ---Мобильное меню--- -->
+    <div class="mobile-menu__backdrop is-hidden" data-menu>
+      <div class="mobile-menu__container">
+        <div class="mobile-menu__btn-wrap">
+          <button class="mobile-menu__close-btn" type="button" close-menu-button>
+            <svg class="mobile-menu__close-icon" width="40" height="40" aria-label="Кнопка закрытия мобильного меню">
+              <use href="./images/icons.svg#close_40px"></use>
+            </svg>
+          </button>
+        </div>
+        <ul class="mobile-menu__nav-list">
+          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#about-us">О нас</a></li>
+          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#servises-and-prices">Услуги и цены</a></li>
+          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#masters">Мастера</a></li>
+          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#contacts">Контакты</a></li>
+        </ul>
+        <div class="mobile-menu__connect">
+          <a class="mobile-menu__link mobile-menu__tel" href="tel:+380441111111">+38 044 111 11 11</a>
+          <a class="button button--light-bg button--for-menu" href="#contacts">Онлайн-запись</a>
+        </div>
+        <ul class="mobile-menu__media-list">
+          <li class="mobile-menu__media-item"><a class="mobile-menu__media-link" href="">Instagram</a></li>
+          <li class="mobile-menu__media-item"><a class="mobile-menu__media-link" href="">Youtube</a></li>
+        </ul>
       </div>
     </div>
   </header>
@@ -73,7 +104,7 @@
             Поэтому, мы всегда готовы усовершенствовать каждого, кто к
             нам приходит!
           </p>
-          <button type="button" class="button button--light-bg">Онлайн-запись</button>
+          <a class="button button--light-bg" href="#contacts">Онлайн-запись</a>
         </div>
       </div>
     </section>
@@ -120,7 +151,7 @@
           </ul>
         </div>
         <div class="prices__btn-wrap">
-          <button class="button" type="button">Онлайн-запись</button>
+          <a class="button" href="#contacts">Онлайн-запись</a>
         </div>
       </div>
     </section>
@@ -342,6 +373,7 @@
     </div>
     
   </footer>
+  <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

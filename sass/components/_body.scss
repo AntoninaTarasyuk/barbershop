@@ -1,8 +1,11 @@
-.body {
+body {
   font-family: "Open Sans", sans-serif;
   letter-spacing: 0.03em;
   color: #555555;
   background-color: #ffffff;
+}
+body.menu-open {
+  overflow: hidden;
 }
 ul {
   margin: 0;

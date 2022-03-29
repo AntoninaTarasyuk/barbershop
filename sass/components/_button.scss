@@ -1,18 +1,24 @@
 .button {
+  min-width: 160px;
+  height: 40px;
+  padding: 12px 20px;
+
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.09em;
-  text-transform: uppercase;
   color: #ffffff;
 
-  background-color: transparent;
-  min-width: 160px;
-  height: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
 
+  background-color: transparent;
   border: 1px solid #ff6c00;
   border-radius: 25px;
+
+  cursor: pointer;
 
   transition: color 300ms linear, background-color 300ms linear;
   &:hover,
@@ -25,5 +31,8 @@
   }
   &--send {
     margin-top: 44px;
+  }
+  &--for-menu {
+    width: 194px;
   }
 }
